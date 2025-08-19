@@ -1,5 +1,7 @@
 import { supabase } from '../../lib/supabaseClient';
 
+export const revalidate = 0;
+
 async function getLinks() {
   const { data, error } = await supabase.from('links').select('*');
   if (error) {
